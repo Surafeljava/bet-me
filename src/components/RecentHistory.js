@@ -24,10 +24,10 @@ function RecentHistory({bets}) {
                             transition={{ type: "spring" }}
                             key={bet.id} className={`flex flex-row gap-1 md:gap-2 lg:gap-4 xl:gap-8 items-center px-4 py-2 bg-secondary-bg-blue border-[1px] rounded-xl ${won?'border-primary-blue':'border-primary-red'}`}>
                                 <div className='flex flex-col'>
-                                    <p className='text-slate-400 text-[12px]'>Bet Amount</p>
+                                    <p className='text-slate-400 text-[10px] md:text-[12px]'>Bet Amount</p>
                                     <div className='flex flex-row items-end gap-1'>
-                                        <p className='text-white text-[11px] mb-1'>ETB</p>
-                                        <p className='text-white font-bold text-lg'>{bet.betAmount}</p>
+                                        <p className='text-white text-[10px] md:text-[11px] mb-1'>ETB</p>
+                                        <p className='text-white font-bold text-base md:text-lg'>{bet.betAmount}</p>
                                     </div>
                                 </div>
 
@@ -36,10 +36,10 @@ function RecentHistory({bets}) {
                                         <div className='w-1.5 h-1.5 bg-slate-500 rounded-full'></div>
 
                                         <div className='flex flex-col'>
-                                            <p className='text-slate-400 text-[12px]'>Won Amount</p>
+                                            <p className='text-slate-400 text-[10px] md:text-[12px]'>Won Amount</p>
                                             <div className='flex flex-row items-end gap-1'>
-                                                <p className='text-white text-[11px] mb-1'>ETB</p>
-                                                <p className='text-white font-bold text-lg'>{bet.betAmount*bet.targetMult}</p>
+                                                <p className='text-white text-[10px] md:text-[11px] mb-1'>ETB</p>
+                                                <p className='text-white font-bold text-base md:text-lg'>{bet.betAmount*bet.targetMult}</p>
                                             </div>
                                         </div>
                                     </>
@@ -48,12 +48,12 @@ function RecentHistory({bets}) {
                                 <div className='w-1.5 h-1.5 bg-slate-500 rounded-full'></div>
 
                                 <div className='flex flex-col'>
-                                    <p className='text-slate-400 text-[12px]'>Target Multiplier</p>
-                                    <p className='text-white font-bold text-lg'>{bet.targetMult}</p>
+                                    <p className='text-slate-400 text-[10px] md:text-[12px]'>Target Multiplier</p>
+                                    <p className='text-white font-bold text-base md:text-lg'>{bet.targetMult}</p>
                                 </div>
 
                                 <div className='flex flex-grow justify-end'>
-                                    <p className={`italic text-xl font-bold ${won?'text-primary-blue':'text-primary-red'}`}>
+                                    <p className={`italic text-lg md:text-xl font-bold ${won?'text-primary-blue':'text-primary-red'}`}>
                                         {won?'WIN' :'LOSE'}
                                     </p>
                                 </div>

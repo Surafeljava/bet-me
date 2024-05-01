@@ -1,6 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function AnimatedCounter({number, onCountFinish}) {
+
+    const {current_bet} = useSelector((state) => state.bets);
+
+    console.log(current_bet.targetMult);
+    console.log(number);
 
     const [num, setNum] = useState(1);
     const numRef = useRef(num);
@@ -61,7 +67,7 @@ function AnimatedCounter({number, onCountFinish}) {
     }, [number])
 
     return (
-        <div className='text-8xl text-primary-blue font-semibold'>
+        <div className={`text-8xl tracking-wider font-semibold ${(!numCountEnded || !decimalCountEnded) ? 'text-white' : (parseFloat(current_bet.targetMult)>=parseFloat(number)) ? 'text-primary-blue' : 'text-primary-red'}`}>
             {num}.{decimal<10 ? `0${decimal}` : decimal}x
         </div>
     );

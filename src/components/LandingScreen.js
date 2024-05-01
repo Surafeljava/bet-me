@@ -24,8 +24,8 @@ function LandingScreen() {
     }
 
     return (
-        <div className='flex flex-1 min-h-screen bg-primary-bg-blue p-2 md:p-4 lg:p-8 flex-col gap-4 font-montserrat'>
-            <div className='flex flex-grow justify-center items-center bg-secondary-bg-blue rounded-xl relative min-h-[400px]'>
+        <div className='flex flex-1 min-h-screen bg-primary-bg-blue p-2 md:p-4 lg:p-6 xl:p-8 flex-col gap-4 font-montserrat'>
+            <div className='flex flex-grow justify-center items-center bg-secondary-bg-blue rounded-xl relative min-h-[400px] w-full'>
                 <AnimatedCounter number={next_number} onCountFinish={handleBetSubmit}/>
                 <TopBetList bets={bets}/>
             </div>

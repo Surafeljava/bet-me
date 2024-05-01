@@ -57,7 +57,7 @@ function BetForm() {
                 <FormTextField name='profitToWin' label='Profit to Win' formValidation={formValidation} onChangeHandler={null} value={current_bet.betAmount*current_bet.targetMult}/>
             </div>
             <FormTextField name='targetMult' label='Target Multiplier' formValidation={formValidation} onChangeHandler={handleInputChange} value={current_bet.targetMult}/>
-            <FormTextField name='winChance' label='Win Chance' formValidation={formValidation} onChangeHandler={null} value={`${((100-current_bet.targetMult)/100)*100}%`} 
+            <FormTextField name='winChance' label='Win Chance' formValidation={formValidation} onChangeHandler={null} value={`${((current_bet.targetMult)/100)*100}%`} 
             placeholder='win chance'/>
             <button disabled={!canBet()} 
             className='px-8 py-2 bg-primary-blue hover:opacity-80 duration-300 text-white rounded-lg' onClick={handleBetClick}>
