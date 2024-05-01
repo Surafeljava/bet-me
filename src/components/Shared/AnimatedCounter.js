@@ -67,7 +67,7 @@ function AnimatedCounter({number, onCountFinish}) {
     }, [number])
 
     return (
-        <div className={`text-8xl tracking-wider font-semibold ${(!numCountEnded || !decimalCountEnded) ? 'text-white' : (parseFloat(current_bet.targetMult)>=parseFloat(number)) ? 'text-primary-blue' : 'text-primary-red'}`}>
+        <div className={`text-6xl md:text-8xl tracking-wider font-semibold ${(!numCountEnded || !decimalCountEnded) ? 'text-white' : (parseFloat(current_bet.targetMult)>=parseFloat(number)) ? 'text-primary-blue' : 'text-primary-red'}`}>
             {num}.{decimal<10 ? `0${decimal}` : decimal}x
         </div>
     );
