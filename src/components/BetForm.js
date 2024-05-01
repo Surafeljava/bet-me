@@ -20,7 +20,7 @@ function BetForm() {
 
     return (
         <div className='w-full h-full flex flex-col p-4 gap-6'>
-            <div className='flex flec-row gap-4'>
+            <div className='flex flex-row gap-4'>
                 <FormTextField name='betAmount' label='Bet Amount' onChangeHandler={handleInputChange} value={current_bet.betAmount}/>
                 <FormTextField name='profitToWin' label='Profit to Win' onChangeHandler={null} value={current_bet.betAmount*current_bet.targetMult}/>
             </div>

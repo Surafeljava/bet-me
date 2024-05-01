@@ -7,7 +7,7 @@ export const betSlice = createSlice({
     next_number: 0,
     current_bet: {
       betAmount: 0,
-      targetMult: 0
+      targetMult: 1
     }
   },
   reducers: {
